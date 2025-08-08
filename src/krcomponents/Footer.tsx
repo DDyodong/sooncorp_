@@ -1,0 +1,39 @@
+import React from 'react'
+import { motion } from 'framer-motion'
+
+function Footer() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  }
+
+  return (
+    <motion.footer
+      className="bg-gray-800 py-8 text-white"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <div className="container mx-auto px-6 text-center">
+        <motion.p variants={itemVariants}>
+          &copy; {new Date().getFullYear()} SOON Corporation. All rights
+          reserved.
+        </motion.p>
+      </div>
+    </motion.footer>
+  )
+}
+
+export default Footer
