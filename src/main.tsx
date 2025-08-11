@@ -14,7 +14,7 @@ document.title = isKor ? '순코퍼레이션' : 'SOONCORPORATION' /*언어 감�
 /*여기는 한국어 페이지로 갈 것인가 영어 페이지로 갈 것인가 정함*/
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    {isKor ? <Kor /> : <App />}
+    {isKor ? <App /> : <App />}
   </StrictMode>
 )
 
