@@ -30,7 +30,9 @@ function Footer() {
         <motion.p variants={itemVariants}>
           &copy; {new Date().getFullYear()} SOON Corporation. All rights
           reserved.
+          <p>Business Registration No: 	737-03-01553 | CEO: SY Kwon</p>
         </motion.p>
+        
       </div>
     </motion.footer>
   )

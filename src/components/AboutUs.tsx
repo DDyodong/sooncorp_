@@ -32,9 +32,9 @@ function AboutUs() {
       <div className="container mx-auto px-6 flex items-center justify-center flex-col md:flex-row">
         <motion.div className="md:w-1/2" variants={itemVariants}>
           <img
-            src="https://images.pexels.com/photos/990424/pexels-photo-990424.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            alt="Manufacturing Facility"
-            className="w-full rounded-lg shadow-md"
+            src="/img/Logomain.png" 
+            alt="logo"
+            className="w-full rounded-lg"
           />
         </motion.div>
         <div className="md:w-1/2 mt-8 md:mt-0 md:ml-12">

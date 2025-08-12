@@ -39,37 +39,34 @@ function Organization() {
         >
           <div>
             <h3 className="text-xl font-semibold text-gray-700 mb-4">
-              Manufacturing
+              Procurement
             </h3>
             <p className="text-gray-600">
-              Our manufacturing team ensures precision and quality in every
-              product.
+              Our procurement team ensures timely sourcing of materials and efficient supplier coordination.
             </p>
           </div>
           <div>
             <h3 className="text-xl font-semibold text-gray-700 mb-4">
-              Quality Control
+              Domestic & International Sales
             </h3>
             <p className="text-gray-600">
-              We adhere to strict quality control standards to deliver reliable
-              products.
+              Our sales departments handle both domestic and international markets, delivering responsive service to clients worldwide.
             </p>
           </div>
           <div>
             <h3 className="text-xl font-semibold text-gray-700 mb-4">
-              Sales & Marketing
+              Logistics
             </h3>
             <p className="text-gray-600">
-              Our sales team is dedicated to providing excellent customer
-              service and support.
+              The logistics team ensures efficient and accurate delivery of products across the globe.
             </p>
           </div>
           <div>
             <h3 className="text-xl font-semibold text-gray-700 mb-4">
-              Research & Development
+              Quality Control & Assurance
             </h3>
             <p className="text-gray-600">
-              We continuously innovate to improve our products and processes.
+              We implement rigorous quality control and assurance practices, including document verification, to maintain the highest standards.
             </p>
           </div>
         </motion.div>
