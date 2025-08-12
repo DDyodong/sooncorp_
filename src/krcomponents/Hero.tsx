@@ -22,7 +22,7 @@ function Hero() {
 
   return (
     <motion.section
-      className="bg-zinc-300 py-20" // tailwind css의 클래스를 가져온 것이니 잘 모르겠으면 tailwind의 클래스 사용법을 다시 숙지합시다. tailwind의 기본 사용법은 전부 소문자로 쓰는겁니다.
+      className="bg-zinc-300 py-20"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -32,14 +32,13 @@ function Hero() {
           className="text-4xl font-bold text-gray-800 mb-4"
           variants={itemVariants}
         >
-          Welcome to SOON Corporation
+          순코퍼레이션에 오신 것을 환영합니다
         </motion.h1>
         <motion.p
           className="text-xl text-gray-600 mb-8"
           variants={itemVariants}
         >
-          We are a manufacturer and exporter specialized in piping components,
-          providing the best quality products and services to customers worldwide.
+          저희는 배관 자재 전문 제조·수출 기업으로, 전 세계 고객에게 최고의 품질과 서비스를 제공합니다.
         </motion.p>
       </div>
     </motion.section>

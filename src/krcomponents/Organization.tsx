@@ -31,7 +31,7 @@ function Organization() {
           className="text-3xl font-bold text-gray-800 mb-8 text-center"
           variants={itemVariants}
         >
-          Organization
+          조직 구성
         </motion.h2>
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
@@ -39,34 +39,34 @@ function Organization() {
         >
           <div>
             <h3 className="text-xl font-semibold text-gray-700 mb-4">
-              Procurement
+              구매팀
             </h3>
             <p className="text-gray-600">
-              Our procurement team ensures timely sourcing of materials and efficient supplier coordination.
+              구매팀은 자재를 적시에 조달하고, 효율적인 공급업체 관리와 협력을 담당합니다.
             </p>
           </div>
           <div>
             <h3 className="text-xl font-semibold text-gray-700 mb-4">
-              Domestic & International Sales
+              국내·해외 영업팀
             </h3>
             <p className="text-gray-600">
-              Our sales departments handle both domestic and international markets, delivering responsive service to clients worldwide.
+              영업팀은 국내외 시장을 모두 담당하며, 전 세계 고객에게 신속하고 맞춤형 서비스를 제공합니다.
             </p>
           </div>
           <div>
             <h3 className="text-xl font-semibold text-gray-700 mb-4">
-              Logistics
+              물류팀
             </h3>
             <p className="text-gray-600">
-              The logistics team ensures efficient and accurate delivery of products across the globe.
+              물류팀은 전 세계로 제품을 정확하고 효율적으로 배송하는 역할을 수행합니다.
             </p>
           </div>
           <div>
             <h3 className="text-xl font-semibold text-gray-700 mb-4">
-              Quality Control & Assurance
+              품질 관리 및 보증팀
             </h3>
             <p className="text-gray-600">
-              We implement rigorous quality control and assurance practices, including document verification, to maintain the highest standards.
+              문서 검증을 포함한 철저한 품질 관리와 보증 절차를 통해 최고의 품질 기준을 유지합니다.
             </p>
           </div>
         </motion.div>

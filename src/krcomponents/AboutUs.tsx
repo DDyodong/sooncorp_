@@ -42,35 +42,34 @@ function AboutUs() {
             className="text-3xl font-bold text-gray-800 mb-4"
             variants={itemVariants}
           >
-            About SOON Corporation
+            순코퍼레이션 소개
           </motion.h2>
           <motion.p
             className="text-gray-600 mb-4"
             variants={itemVariants}
           >
-            SOON Corporation was established in Busan, Korea in 2020 as a
-            manufacturer and exporter specialized in piping components.
+            순코퍼레이션은 2020년 대한민국 부산에서 설립된 배관 자재 전문 제조·수출 기업입니다.
           </motion.p>
           <motion.p
             className="text-gray-600 mb-4"
             variants={itemVariants}
           >
-            Equipped with state-of-the-art facilities and a skilled workforce, we deliver top-quality products and services to customers worldwide.
+            최신 설비와 숙련된 인력을 바탕으로 전 세계 고객에게 최고 품질의 제품과 서비스를 제공합니다.
           </motion.p>
           <motion.p
             className="text-gray-600 mb-4"
             variants={itemVariants}
           >
-            Our product range includes various fittings, flanges, valves, forgings, pipes, and protective coatings used in onshore, offshore, plant, construction, shipbuilding, and transportation industries.
+            주요 제품은 온쇼어, 오프쇼어, 플랜트, 건설, 조선, 운송 산업에서 사용되는 다양한 피팅, 플랜지, 밸브, 단조품, 파이프, 보호 코팅 등을 포함합니다.
           </motion.p>
           <motion.p
             className='text-gray-600 mb-4'
             variants={itemVariants}
           >
-            Guided by the philosophy that "nothing can be achieved without passion," we strive for top quality, reasonable pricing, and timely delivery.
+            "열정 없이는 어떤 것도 이룰 수 없다"는 철학 아래, 최고의 품질, 합리적인 가격, 신속한 납기를 위해 최선을 다하고 있습니다.
           </motion.p>
           <motion.p className="text-gray-600" variants={itemVariants}>
-             We are grateful for the ongoing support and cooperation of our valued customers and global partners, and we look forward to continuing strong relationships built on trust and commitment.
+            저희는 소중한 고객과 글로벌 파트너들의 지속적인 성원과 협력에 깊이 감사드리며, 신뢰와 약속을 바탕으로 한 굳건한 관계를 이어가겠습니다.
           </motion.p>
         </div>
       </div>

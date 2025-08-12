@@ -12,88 +12,88 @@ const categories: SupplierCategory[] = [
   {
     title: "Fittings",
     items: [
-      "TK Corporation (Korea)",
-      "SBC Bend (Korea)",
-      "Hwajin PF (Korea)",
-      "Daekyung Bend (Korea)",
-      "Jinil Bend (Korea)",
-      "Kyungnam Bend (Korea)",
-      "Pusan Fitting (Korea)",
-      "Samyoung Fitting (Korea)",
-      "HPCO (China)",
-      "FJGX (China)",
-      "Hong Cheung (China)",
-      "TIANLONG (China)",
-      "GUANGHAO (China)",
-      "C&N (China)",
-      "MTSCO (China)",
-      "Thai Benkan Co., Ltd / BKL (Thailand)",
-      "Tubacex (Spain)",
+      "TK Corporation (한국)",
+      "SBC Bend (한국)",
+      "Hwajin PF (한국)",
+      "Daekyung Bend (한국)",
+      "Jinil Bend (한국)",
+      "Kyungnam Bend (한국)",
+      "Pusan Fitting (한국)",
+      "Samyoung Fitting (한국)",
+      "HPCO (중국)",
+      "FJGX (중국)",
+      "Hong Cheung (중국)",
+      "TIANLONG (중국)",
+      "GUANGHAO (중국)",
+      "C&N (중국)",
+      "MTSCO (중국)",
+      "Thai Benkan Co., Ltd / BKL (태국)",
+      "Tubacex (스페인)",
     ],
   },
   {
     title: "Pipes",
     items: [
-      "Seah (Korea)",
-      "Hyundai RB (Korea)",
-      "DaiDuck (Korea)",
-      "Hyundai Steel (Korea)",
-      "TPCO (China)",
-      "Jiuli (China)",
-      "Walsin (China)",
-      "ChengDe (China)",
-      "Wujin (China)",
-      "BaoSteel (China)",
-      "FJGX (China)",
-      "Shandong Molong Petroleum (China)",
-      "JIANGSU XINCHANGJIANG (China)",
-      "Nippon Steel & Sumitomo Metal (Japan)",
-      "JFE Steel (Japan)",
-      "Kobelco (Japan)",
-      "V&M (France, Germany & Brazil)",
-      "Benteler (Germany)",
-      "US Steel (USA)",
-      "Tubacex (Spain)",
-      "Tubos Reunidos (Spain)",
-      "Inox Tech (Italy)",
-      "Productos (Spain)",
+      "Seah (한국)",
+      "Hyundai RB (한국)",
+      "DaiDuck (한국)",
+      "Hyundai Steel (한국)",
+      "TPCO (중국)",
+      "Jiuli (중국)",
+      "Walsin (중국)",
+      "ChengDe (중국)",
+      "Wujin (중국)",
+      "BaoSteel (중국)",
+      "FJGX (중국)",
+      "Shandong Molong Petroleum (중국)",
+      "JIANGSU XINCHANGJIANG (중국)",
+      "Nippon Steel & Sumitomo Metal (일본)",
+      "JFE Steel (일본)",
+      "Kobelco (일본)",
+      "V&M (프랑스, 독일 & 브라질)",
+      "Benteler (독일)",
+      "US Steel (미국)",
+      "Tubacex (스페인)",
+      "Tubos Reunidos (스페인)",
+      "Inox Tech (이탈리아)",
+      "Productos (스페인)",
     ],
   },
   {
     title: "Flanges",
     items: [
-      "SH Metal (Korea)",
-      "YCT / YCF CO., LTD (Korea)",
-      "Pillar Tech (Korea)",
-      "Hyundai Fitting (Korea)",
-      "Daehyeong (Korea)",
-      "Myungjin Metal (Korea)",
-      "Felix Tech (Korea)",
-      "Jinchuang (China)",
-      "C&N (China)",
-      "MTSCO (China)",
-      "HP CO (China)",
-      "ZOECA (China)",
-      "Ulma (Spain)",
-      "Galperti (Italy)",
+      "SH Metal (한국)",
+      "YCT / YCF CO., LTD (한국)",
+      "Pillar Tech (한국)",
+      "Hyundai Fitting (한국)",
+      "Daehyeong (한국)",
+      "Myungjin Metal (한국)",
+      "Felix Tech (한국)",
+      "Jinchuang (중국)",
+      "C&N (중국)",
+      "MTSCO (중국)",
+      "HP CO (중국)",
+      "ZOECA (중국)",
+      "Ulma (스페인)",
+      "Galperti (이탈리아)",
     ],
   },
   {
     title: "Valves & Others",
     items: [
-      "PK Valve (Korea)",
-      "DKC (Korea)",
-      "WILCO (Korea)",
-      "Woosung Valve (Korea)",
-      "SVT Corporation (Korea)",
-      "HKC Korea Precision (Korea)",
-      "HS Valve (Korea)",
-      "Kumsung Machinery (Korea)",
-      "KITT (Korea)",
-      "KJ ENG (Korea)",
-      "Jongang Bending (Korea)",
-      "Cheumwoo Industry (Korea)",
-      "Dongjin EF (Korea) – Expansion Joint, Rubber Joint, Silicone Joint",
+      "PK Valve (한국)",
+      "DKC (한국)",
+      "WILCO (한국)",
+      "Woosung Valve (한국)",
+      "SVT Corporation (한국)",
+      "HKC Korea Precision (한국)",
+      "HS Valve (한국)",
+      "Kumsung Machinery (한국)",
+      "KITT (한국)",
+      "KJ ENG (한국)",
+      "Jongang Bending (한국)",
+      "Cheumwoo Industry (한국)",
+      "Dongjin EF (한국) – Expansion Joint, Rubber Joint, Silicone Joint",
     ],
   },
 ]
@@ -112,9 +112,7 @@ function AccordionRow({
   return (
     <div
       className={`rounded-2xl border shadow-sm transition ${
-        isOpen
-          ? "bg-[#003366] text-white"
-          : "bg-white text-[#003366]"
+        isOpen ? "bg-[#003366] text-white" : "bg-white text-[#003366]"
       }`}
     >
       <button
@@ -123,9 +121,7 @@ function AccordionRow({
         aria-expanded={isOpen}
         aria-controls={`panel-${index}`}
       >
-        <span className="text-base font-semibold tracking-tight">
-          {title}
-        </span>
+        <span className="text-base font-semibold tracking-tight">{title}</span>
         <ChevronDown
           className={`h-5 w-5 shrink-0 transition-transform ${
             isOpen ? "rotate-180" : ""
@@ -157,11 +153,11 @@ function AccordionRow({
     </div>
   )
 }
+
 export default function Suppliers() {
-  // 처음에는 첫 섹션만 열어둠
   const [openSet, setOpenSet] = useState<Set<number>>(new Set([0]))
 
-  const toggle = (i: number) => { 
+  const toggle = (i: number) => {
     setOpenSet((prev) => {
       const next = new Set(prev)
       next.has(i) ? next.delete(i) : next.add(i)
@@ -170,7 +166,6 @@ export default function Suppliers() {
   }
 
   return (
-
     <section id="suppliers" className="bg-gray-50 py-16">
       <div className="mx-auto max-w-5xl px-6">
         <div className="mb-6 flex items-center justify-center">

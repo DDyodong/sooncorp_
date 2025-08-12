@@ -21,7 +21,7 @@ function Contact() {
   }
 
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: 'AIzaSyBFc__p5mK4l2gBbdyVG5_zKypGa4mqSBY', // 구글 map api key 입니다. 나중에 map api에 도메인을 설정하죠
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY as string, // Load from .env
   })
 
   const mapContainerStyle = {
@@ -32,7 +32,7 @@ function Contact() {
   const center = {
     lat: 35.181108, // Latitude for Busan
     lng: 129.075840, // Longitude for Busan
-  } //35.181108, 129.075840
+  }
 
   return (
     <motion.section
@@ -58,16 +58,16 @@ function Contact() {
               SOON Corporation
             </h3>
             <p className="text-gray-600 mb-2">
-              Address: [Room 203-301, 12 Sicheong-ro, Yeonje-gu, Busan, Republic of Korea]
+              Address: Room 203-301, 12 Sicheong-ro, Yeonje-gu, Busan, Republic of Korea
             </p>
             <p className="text-gray-600 mb-2">
-              Phone: [Mobile +82-10-8770-6145]
-            </p>
-            <p className='text-gray-600 mb-2'>
-              Fax: [+82-51-868-7280]
+              Phone: +82-10-8770-6145
             </p>
             <p className="text-gray-600 mb-2">
-              Email: [ksy8634@naver.com]
+              Fax: +82-51-868-7280
+            </p>
+            <p className="text-gray-600 mb-2">
+              Email: ksy8634@naver.com
             </p>
           </div>
           <div>
@@ -77,7 +77,7 @@ function Contact() {
                 center={center}
                 zoom={18}
               >
-                <Marker position={{lat: 35.181108, lng: 129.07584 }} />
+                <Marker position={center} />
               </GoogleMap>
             ) : (
               <div>Loading Google Maps...</div>
