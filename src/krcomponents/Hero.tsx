@@ -22,7 +22,7 @@ function Hero() {
 
   return (
     <motion.section
-      className="bg-gray-100 py-20"
+      className="bg-zinc-300 py-20"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -32,15 +32,14 @@ function Hero() {
           className="text-4xl font-bold text-gray-800 mb-4"
           variants={itemVariants}
         >
-          Welcome to SoonCorporation
+          순코퍼레이션에 오신 것을 환영합니다
         </motion.h1>
         <motion.p
           className="text-xl text-gray-600 mb-8"
           variants={itemVariants}
         >
-          저희는 배관 부품을 전문으로 하는 제조 및 수출 업체로, 전 세계 고객에게 최고의 품질의 제품과 서비스를 제공합니다.
+          저희는 배관 자재 전문 제조·수출 기업으로, 전 세계 고객에게 최고의 품질과 서비스를 제공합니다.
         </motion.p>
-        
       </div>
     </motion.section>
   )

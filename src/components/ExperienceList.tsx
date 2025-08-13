@@ -1,63 +1,64 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-
-function ExperienceList() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
-      },
-    },
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  }
-
-  return (
-    <motion.section
-      className="py-16 bg-gray-50"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <div className="container mx-auto px-6">
-        <motion.h2
-          className="text-3xl font-bold text-gray-800 mb-8 text-center"
-          variants={itemVariants}
-        >
-          Experience List
-        </motion.h2>
-        <motion.ul
-          className="list-disc list-inside text-gray-600"
-          variants={itemVariants}
-        >
-          <motion.li variants={itemVariants}>
-            Extensive experience in piping component manufacturing since 2020.
-          </motion.li>
-          <motion.li variants={itemVariants}>
-            Proven track record of delivering high-quality products to global
-            markets.
-          </motion.li>
-          <motion.li variants={itemVariants}>
-            Strong relationships with clients in on-shore, off-shore, and
-            construction industries.
-          </motion.li>
-          <motion.li variants={itemVariants}>
-            Expertise in handling diverse projects with varying specifications.
-          </motion.li>
-          <motion.li variants={itemVariants}>
-            Commitment to continuous improvement and customer satisfaction.
-          </motion.li>
-        </motion.ul>
-      </div>
-    </motion.section>
-  )
+type Bullet = string
+type Project = {
+  year: string
+  name: string
+  purchaser: string
+  location: string
+  item: string
+  material: string
 }
 
-export default ExperienceList
+const bullets: Bullet[] = [
+  "Carrying out piping material manufacturing and sourcing projects since 2020",
+  "Global supply record and provision of high-quality products",
+  "Compliance with standards for onshore/offshore/plant/construction projects",
+  "Commitment to customer satisfaction and continuous improvement",
+]
+
+const projects: Project[] = [
+  { year: "2023", name: "Piping Valve Modernization Revamping", purchaser: "Domestic EPC", location: "Korea / Hyundai Heavy Industries, etc.", item: "Fitting, Pipe", material: "Carbon / Alloy / Stainless" },
+  { year: "2022", name: "Offshore Plant Spool", purchaser: "Middle East EPC", location: "UAE / Dubai", item: "Flange, Fitting, Pipe", material: "CS / SS" },
+  { year: "2021", name: "TPA JOB", purchaser: "ZARAWA Company", location: "Iraq", item: "Flange, Fitting, Long Bend", material: "CS / Hi-Tensile" },
+  { year: "2020", name: "TOC", purchaser: "Dubai Petroleum", location: "Dubai", item: "Flange, Fitting", material: "Stainless / Carbon" },
+]
+
+export default function ExperienceList() {
+  return (
+    <section id="experience" className="px-6 md:px-10 py-16 bg-slate-50">
+      <div className="mx-auto max-w-6xl">
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center">Experience List</h2>
+
+        <ul className="mt-8 space-y-2 list-disc list-inside text-slate-700 max-w-3xl mx-auto">
+          {bullets.map((b, i) => <li key={i}>{b}</li>)}
+        </ul>
+
+        <div className="mt-10 overflow-x-auto">
+          <table className="w-full text-sm bg-white rounded-2xl overflow-hidden border">
+            <thead className="bg-slate-100">
+              <tr className="text-left text-slate-600">
+                <th className="py-3 px-4">Year</th>
+                <th className="py-3 px-4">Project Name</th>
+                <th className="py-3 px-4">Purchaser</th>
+                <th className="py-3 px-4">Location</th>
+                <th className="py-3 px-4">Item</th>
+                <th className="py-3 px-4">Material Reference</th>
+              </tr>
+            </thead>
+            <tbody>
+              {projects.map((p, i) => (
+                <tr key={i} className="border-t">
+                  <td className="py-3 px-4">{p.year}</td>
+                  <td className="py-3 px-4">{p.name}</td>
+                  <td className="py-3 px-4">{p.purchaser}</td>
+                  <td className="py-3 px-4">{p.location}</td>
+                  <td className="py-3 px-4">{p.item}</td>
+                  <td className="py-3 px-4">{p.material}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  )
+}

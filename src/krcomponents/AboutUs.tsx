@@ -32,9 +32,9 @@ function AboutUs() {
       <div className="container mx-auto px-6 flex items-center justify-center flex-col md:flex-row">
         <motion.div className="md:w-1/2" variants={itemVariants}>
           <img
-            src="https://images.pexels.com/photos/990424/pexels-photo-990424.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            alt="Manufacturing Facility"
-            className="w-full rounded-lg shadow-md"
+            src="/img/Logomain.png" 
+            alt="logo"
+            className="w-full rounded-lg"
           />
         </motion.div>
         <div className="md:w-1/2 mt-8 md:mt-0 md:ml-12">
@@ -42,28 +42,34 @@ function AboutUs() {
             className="text-3xl font-bold text-gray-800 mb-4"
             variants={itemVariants}
           >
-            Soon Corporation
+            순코퍼레이션 소개
           </motion.h2>
           <motion.p
             className="text-gray-600 mb-4"
             variants={itemVariants}
           >
-            순코퍼레이션은 2020년 대한민국 부산에서 배관 부품을 전문으로 하는 제조 및 수출 업체로 설립되었습니다.
+            순코퍼레이션은 2020년 대한민국 부산에서 설립된 배관 자재 전문 제조·수출 기업입니다.
           </motion.p>
           <motion.p
             className="text-gray-600 mb-4"
             variants={itemVariants}
           >
-            최신 설비를 갖추고 우수한 인력을 보유한 순코퍼레이션은 전 세계 고객에게 최고의 품질의 제품과 서비스를 제공합니다.
+            최신 설비와 숙련된 인력을 바탕으로 전 세계 고객에게 최고 품질의 제품과 서비스를 제공합니다.
           </motion.p>
           <motion.p
             className="text-gray-600 mb-4"
             variants={itemVariants}
           >
-            저희 제품은 육상·해상·플랜트·건설·조선·운송 분야에 사용되는 다양한 피팅, 플랜지, 밸브, 단조품 및 파이프를 포함하고 있습니다.
+            주요 제품은 온쇼어, 오프쇼어, 플랜트, 건설, 조선, 운송 산업에서 사용되는 다양한 피팅, 플랜지, 밸브, 단조품, 파이프, 보호 코팅 등을 포함합니다.
+          </motion.p>
+          <motion.p
+            className='text-gray-600 mb-4'
+            variants={itemVariants}
+          >
+            "열정 없이는 어떤 것도 이룰 수 없다"는 철학 아래, 최고의 품질, 합리적인 가격, 신속한 납기를 위해 최선을 다하고 있습니다.
           </motion.p>
           <motion.p className="text-gray-600" variants={itemVariants}>
-            “열정 없이 이룰 수 있는 것은 없다”라는 경영 철학 아래, 저희는 최고의 품질, 합리적인 가격, 적절한 납기를 추구합니다.
+            저희는 소중한 고객과 글로벌 파트너들의 지속적인 성원과 협력에 깊이 감사드리며, 신뢰와 약속을 바탕으로 한 굳건한 관계를 이어가겠습니다.
           </motion.p>
         </div>
       </div>
