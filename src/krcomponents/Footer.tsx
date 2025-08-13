@@ -26,7 +26,7 @@ function Footer() {
     >
       <div className="container mx-auto px-6 text-center space-y-2">
         <motion.p variants={itemVariants}>
-          &copy; {year} 순코퍼레이션. 모든 권리 보유.
+          &copy; {year} 순코퍼레이션.  All rights.
         </motion.p>
         <motion.p variants={itemVariants} className="text-gray-300">
           사업자등록번호: 737-03-01553&nbsp;|&nbsp;대표자: 권순영
