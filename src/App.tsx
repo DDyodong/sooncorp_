@@ -8,6 +8,7 @@ import ExperienceList from './components/ExperienceList'
 import AfterSalesService from './components/AfterSalesService'
 import Suppliers from './components/Suppliers'
 import Contact from './components/Contact'
+import Header from './components/Header'
 import { motion } from 'framer-motion'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <Header />
       <Hero />
       <AboutUs />
       <StockProgram />
