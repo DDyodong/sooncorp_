@@ -8,7 +8,9 @@ import ExperienceList from './krcomponents/ExperienceList'
 import AfterSalesService from './krcomponents/AfterSalesService'
 import Suppliers from './krcomponents/Suppliers'
 import Contact from './krcomponents/Contact'
+import Header from './krcomponents/Header'
 import { motion } from 'framer-motion'
+
 
 function App() { 
   return (
@@ -18,6 +20,7 @@ function App() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <Header/>
       <Hero />
       <AboutUs />
       <StockProgram />
