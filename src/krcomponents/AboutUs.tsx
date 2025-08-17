@@ -42,13 +42,13 @@ function AboutUs() {
             className="text-3xl font-bold text-gray-800 mb-4"
             variants={itemVariants}
           >
-            순코퍼레이션 소개
+            순코프레이션 소개
           </motion.h2>
           <motion.p
             className="text-gray-600 mb-4"
             variants={itemVariants}
           >
-            순코퍼레이션은 2020년 대한민국 부산에서 설립된 배관 자재 전문 제조·수출 기업입니다.
+            순코프레이션은 2020년 대한민국 부산에서 설립된 배관 자재 전문 제조·수출 기업입니다.
           </motion.p>
           <motion.p
             className="text-gray-600 mb-4"

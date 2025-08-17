@@ -32,7 +32,7 @@ function Hero() {
           className="text-4xl font-bold text-gray-800 mb-4"
           variants={itemVariants}
         >
-          순코퍼레이션에 오신 것을 환영합니다
+          순코프레이션에 오신 것을 환영합니다
         </motion.h1>
         <motion.p
           className="text-xl text-gray-600 mb-8"
