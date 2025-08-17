@@ -30,9 +30,24 @@ function Footer() {
         <motion.p variants={itemVariants}>
           &copy; {new Date().getFullYear()} SOON Corporation. All rights
           reserved.
-          <p>Business Registration No: 	737-03-01553 | CEO: SY Kwon</p>
+          <p>Business Registration No: 737-03-01553 | CEO: SY Kwon</p>
         </motion.p>
-        
+
+        {/* Freepik 크레딧 */}
+        <motion.p 
+          variants={itemVariants} 
+          className="text-xs text-gray-400 mt-2"
+        >
+          Images by{' '}
+          <a 
+            href="https://www.freepik.com" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="underline hover:text-gray-300"
+          >
+            Freepik
+          </a>
+        </motion.p>
       </div>
     </motion.footer>
   )

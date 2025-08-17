@@ -1,49 +1,49 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 function Hero() {
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
-      },
-    },
-  }
+  const [scrollY, setScrollY] = useState(0);
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  }
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // 스크롤에 따라 높이 줄어듦 (최소 200px)
+  const heroHeight = Math.max(200, 500 - scrollY * 0.5);
 
   return (
     <motion.section
-      className="bg-zinc-300 py-20" // tailwind css의 클래스를 가져온 것이니 잘 모르겠으면 tailwind의 클래스 사용법을 다시 숙지합시다. tailwind의 기본 사용법은 전부 소문자로 쓰는겁니다.
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
+      className="relative w-full flex items-center justify-center text-center"
+      style={{
+        height: heroHeight,
+        backgroundImage: `url('/img/background.jpg')`, // 이미지 경로
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed', // Parallax 느낌
+      }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
     >
-      <div className="container mx-auto px-6 text-center">
-        <motion.h1
-          className="text-4xl font-bold text-gray-800 mb-4"
-          variants={itemVariants}
-        >
+      {/* 반투명 오버레이 */}
+      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+
+      {/* 중앙 텍스트 */}
+      <div className="relative z-10 px-6">
+        <h1 className="text-4xl font-bold text-white mb-4">
           Welcome to SOON Corporation
-        </motion.h1>
-        <motion.p
-          className="text-xl text-gray-600 mb-8"
-          variants={itemVariants}
-        >
+        </h1>
+        <p className="text-xl text-gray-200">
           We are a manufacturer and exporter specialized in piping components,
           providing the best quality products and services to customers worldwide.
-        </motion.p>
+        </p>
       </div>
     </motion.section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

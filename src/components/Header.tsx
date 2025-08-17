@@ -16,7 +16,7 @@ function Header() {
           <ul className="flex space-x-6">
             <li>
               <Link to="/kr" className="text-gray-600 hover:text-blue-500">
-                kr
+                Kr
               </Link>
             </li>
           </ul>
