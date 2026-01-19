@@ -69,6 +69,10 @@ function Contact() {
             <p className="text-gray-600 mb-2">
               Email: ksy8634@naver.com
             </p>
+            <p className='text-gray-600 mb-2'>
+              For Inquiries: soonslaes@sooncorp.kr
+            </p>
+            
           </div>
           <div>
             {isLoaded ? (

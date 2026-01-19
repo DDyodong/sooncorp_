@@ -50,6 +50,7 @@ function Contact() {
             <p className="text-gray-600 mb-2">전화: +82-10-8770-6145</p>
             <p className="text-gray-600 mb-2">팩스: +82-51-868-7280</p>
             <p className="text-gray-600 mb-2">이메일: ksy8634@naver.com</p>
+            <p className="text-gray-600 mb-2 ml-14">soonsales@sooncorp.kr</p>
           </div>
 
           <div>
