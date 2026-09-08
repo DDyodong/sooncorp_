@@ -4,3 +4,6 @@ dist/
 .env
 .env.*
 !.env.example
+
+# Ignore the leftover nested checkout; the application lives in /src.
+/newsooncorp/
