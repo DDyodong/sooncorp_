@@ -1,0 +1,296 @@
+{
+  "hero": {
+    "title": "순코퍼레이션에 오신 것을 환영합니다",
+    "description": "저희는 배관 부품을 전문적으로 제조 및 수출하는 기업으로서, 최고의 품질과 서비스를 전 세계 고객에게 제공하고 있습니다."
+  },
+  "about": {
+    "title": "순코퍼레이션 소개",
+    "paragraphs": [
+      "순코퍼레이션은 2020년 대한민국 부산에서 설립된 배관 자재 전문 제조·수출 기업입니다.",
+      "최신 설비와 숙련된 인력을 바탕으로 전 세계 고객에게 최고 품질의 제품과 서비스를 제공합니다.",
+      "주요 제품은 온쇼어, 오프쇼어, 플랜트, 건설, 조선, 운송 산업에서 사용되는 다양한 피팅, 플랜지, 밸브, 단조품, 파이프, 보호 코팅 등을 포함합니다.",
+      "\"열정 없이는 어떤 것도 이룰 수 없다\"는 철학 아래, 최고의 품질, 합리적인 가격, 신속한 납기를 위해 최선을 다하고 있습니다.",
+      "저희는 소중한 고객과 글로벌 파트너들의 지속적인 성원과 협력에 깊이 감사드리며, 신뢰와 약속을 바탕으로 한 굳건한 관계를 이어가겠습니다."
+    ]
+  },
+  "products": {
+    "title": "재고 프로그램",
+    "items": [
+      {
+        "title": "피팅류",
+        "description": "엘보, 티, 리듀서, 커플링, 캡 등 다양한 재질과 규격 보유."
+      },
+      {
+        "title": "플랜지",
+        "description": "용접식 넥, 슬립온, 블라인드, 소켓 용접, 나사식 등."
+      },
+      {
+        "title": "밸브",
+        "description": "게이트, 글로브, 체크, 볼, 버터플라이 밸브 등 다양한 용도에 적용."
+      },
+      {
+        "title": "단조품",
+        "description": "고객 요구사항에 맞춘 맞춤형 및 표준 단조품 제공."
+      },
+      {
+        "title": "파이프",
+        "description": "다양한 강종과 규격의 이음매 없는 파이프 및 용접 파이프."
+      },
+      {
+        "title": "특수 품목",
+        "description": "산업별 특수 요구사항에 맞춘 맞춤형 부품 제공."
+      }
+    ]
+  },
+  "organization": {
+    "title": "조직 구성",
+    "items": [
+      {
+        "title": "구매팀",
+        "description": "구매팀은 자재를 적시에 조달하고, 효율적인 공급업체 관리와 협력을 담당합니다."
+      },
+      {
+        "title": "국내·해외 영업팀",
+        "description": "영업팀은 국내외 시장을 모두 담당하며, 전 세계 고객에게 신속하고 맞춤형 서비스를 제공합니다."
+      },
+      {
+        "title": "물류팀",
+        "description": "물류팀은 전 세계로 제품을 정확하고 효율적으로 배송하는 역할을 수행합니다."
+      },
+      {
+        "title": "품질 관리 및 보증팀",
+        "description": "문서 검증을 포함한 철저한 품질 관리와 보증 절차를 통해 최고의 품질 기준을 유지합니다."
+      }
+    ]
+  },
+  "experience": {
+    "title": "경력 및 실적",
+    "bullets": [
+      "2020년부터 배관 자재 제조 및 소싱 프로젝트 수행",
+      "글로벌 공급 실적과 고품질 제품 제공",
+      "온쇼어·오프쇼어·플랜트·건설 프로젝트 규격 준수",
+      "고객 만족과 지속적인 품질 개선에 대한 약속"
+    ],
+    "table": {
+      "headers": [
+        "연도",
+        "프로젝트명",
+        "구매처",
+        "위치",
+        "품목",
+        "재질"
+      ],
+      "rows": [
+        [
+          "2023",
+          "배관 밸브 현대화 리바핑",
+          "국내 EPC",
+          "대한민국 / 현대중공업 외",
+          "피팅, 파이프",
+          "탄소강 / 합금강 / 스테인리스"
+        ],
+        [
+          "2022",
+          "해양 플랜트 스풀",
+          "중동 EPC",
+          "아랍에미리트 / 두바이",
+          "플랜지, 피팅, 파이프",
+          "CS / SS"
+        ],
+        [
+          "2021",
+          "TPA JOB",
+          "ZARAWA Company",
+          "이라크",
+          "플랜지, 피팅, 롱밴드",
+          "CS / 하이텐실"
+        ],
+        [
+          "2020",
+          "TOC",
+          "Dubai Petroleum",
+          "두바이",
+          "플랜지, 피팅",
+          "스테인리스 / 탄소강"
+        ]
+      ]
+    }
+  },
+  "service": {
+    "title": "A/S 서비스",
+    "promises": [
+      "품질 보증 및 문서 지원 (QA/QC, CoC, Mill Test Report)",
+      "상시 예비부품 보유 / 긴급 대응",
+      "현장 유지보수·재작업·코팅/가공 지원",
+      "재생산 리드타임 최소화 및 대안 제시"
+    ],
+    "tables": [
+      {
+        "title": "A/S 담당 인력",
+        "headers": [
+          "No.",
+          "직무"
+        ],
+        "rows": [
+          [
+            "1",
+            "영업"
+          ],
+          [
+            "2",
+            "품질관리(QA/QC)"
+          ],
+          [
+            "3",
+            "물류"
+          ]
+        ]
+      },
+      {
+        "title": "A/S 처리 기간",
+        "headers": [
+          "No.",
+          "처리 유형",
+          "소요 기간"
+        ],
+        "rows": [
+          [
+            "1",
+            "재고 공급",
+            "즉시"
+          ],
+          [
+            "2",
+            "수리 후 공급",
+            "1주"
+          ],
+          [
+            "3",
+            "재생산 후 공급",
+            "4주"
+          ]
+        ]
+      }
+    ],
+    "flowTitle": "처리 절차",
+    "steps": [
+      {
+        "title": "제품 정보 → 고객",
+        "description": "납품 전에 제품 정보를 제공합니다"
+      },
+      {
+        "title": "고객 승인",
+        "description": "승인 진행 (미승인 시 수정/재작업)"
+      },
+      {
+        "title": "제품 납품",
+        "description": "납품 및 인도"
+      },
+      {
+        "title": "고객 검사",
+        "description": "검사 진행 / 문제 시 클레임 접수"
+      },
+      {
+        "title": "설치/조립",
+        "description": "요청 시 설치·조립 지원"
+      }
+    ]
+  },
+  "suppliers": {
+    "title": "공급사",
+    "groups": [
+      {
+        "title": "Fittings",
+        "items": [
+          "TK Corporation (한국)",
+          "SBC Bend (한국)",
+          "Hwajin PF (한국)",
+          "Daekyung Bend (한국)",
+          "Jinil Bend (한국)",
+          "Kyungnam Bend (한국)",
+          "Pusan Fitting (한국)",
+          "Samyoung Fitting (한국)",
+          "HPCO (중국)",
+          "FJGX (중국)",
+          "Hong Cheung (중국)",
+          "TIANLONG (중국)",
+          "GUANGHAO (중국)",
+          "C&N (중국)",
+          "MTSCO (중국)",
+          "Thai Benkan Co., Ltd / BKL (태국)",
+          "Tubacex (스페인)"
+        ]
+      },
+      {
+        "title": "Pipes",
+        "items": [
+          "Seah (한국)",
+          "Hyundai RB (한국)",
+          "DaiDuck (한국)",
+          "Hyundai Steel (한국)",
+          "TPCO (중국)",
+          "Jiuli (중국)",
+          "Walsin (중국)",
+          "ChengDe (중국)",
+          "Wujin (중국)",
+          "BaoSteel (중국)",
+          "FJGX (중국)",
+          "Shandong Molong Petroleum (중국)",
+          "JIANGSU XINCHANGJIANG (중국)",
+          "Nippon Steel & Sumitomo Metal (일본)",
+          "JFE Steel (일본)",
+          "Kobelco (일본)",
+          "V&M (프랑스, 독일 & 브라질)",
+          "Benteler (독일)",
+          "US Steel (미국)",
+          "Tubacex (스페인)",
+          "Tubos Reunidos (스페인)",
+          "Inox Tech (이탈리아)",
+          "Productos (스페인)"
+        ]
+      },
+      {
+        "title": "Flanges",
+        "items": [
+          "SH Metal (한국)",
+          "YCT / YCF CO., LTD (한국)",
+          "Pillar Tech (한국)",
+          "Hyundai Fitting (한국)",
+          "Daehyeong (한국)",
+          "Myungjin Metal (한국)",
+          "Felix Tech (한국)",
+          "Jinchuang (중국)",
+          "C&N (중국)",
+          "MTSCO (중국)",
+          "HP CO (중국)",
+          "ZOECA (중국)",
+          "Ulma (스페인)",
+          "Galperti (이탈리아)"
+        ]
+      },
+      {
+        "title": "Valves & Others",
+        "items": [
+          "PK Valve (한국)",
+          "DKC (한국)",
+          "WILCO (한국)",
+          "Woosung Valve (한국)",
+          "SVT Corporation (한국)",
+          "HKC Korea Precision (한국)",
+          "HS Valve (한국)",
+          "Kumsung Machinery (한국)",
+          "KITT (한국)",
+          "KJ ENG (한국)",
+          "Jongang Bending (한국)",
+          "Cheumwoo Industry (한국)",
+          "Dongjin EF (한국) – Expansion Joint, Rubber Joint, Silicone Joint"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "company": "순코퍼레이션",
+    "address": "주소: 부산광역시 연제구 시청로 12, 203-301호 (대한민국)"
+  },
+  "business": "사업자등록번호: 737-03-01553 | 대표자: 권순영"
+}

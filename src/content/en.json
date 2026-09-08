@@ -1,0 +1,296 @@
+{
+  "hero": {
+    "title": "Welcome to SOON Corporation",
+    "description": "We are a manufacturer and exporter specialized in piping components, providing the best quality products and services to customers worldwide."
+  },
+  "about": {
+    "title": "About SOON Corporation",
+    "paragraphs": [
+      "SOON Corporation was established in Busan, Korea in 2020 as a manufacturer and exporter specialized in piping components.",
+      "Equipped with state-of-the-art facilities and a skilled workforce, we deliver top-quality products and services to customers worldwide.",
+      "Our product range includes various fittings, flanges, valves, forgings, pipes, and protective coatings used in onshore, offshore, plant, construction, shipbuilding, and transportation industries.",
+      "Guided by the philosophy that \"nothing can be achieved without passion,\" we strive for top quality, reasonable pricing, and timely delivery.",
+      "We are grateful for the ongoing support and cooperation of our valued customers and global partners, and we look forward to continuing strong relationships built on trust and commitment."
+    ]
+  },
+  "products": {
+    "title": "Stock Program",
+    "items": [
+      {
+        "title": "Fittings",
+        "description": "Elbows, Tees, Reducers, Couplings, Caps, etc. in various materials and sizes."
+      },
+      {
+        "title": "Flanges",
+        "description": "Welding Neck, Slip-On, Blind, Socket Welding, Threaded, etc."
+      },
+      {
+        "title": "Valves",
+        "description": "Gate, Globe, Check, Ball, Butterfly valves for diverse applications."
+      },
+      {
+        "title": "Forgings",
+        "description": "Custom and standard forgings to meet specific requirements."
+      },
+      {
+        "title": "Pipes",
+        "description": "Seamless and welded pipes in various grades and dimensions."
+      },
+      {
+        "title": "Specialty Items",
+        "description": "Unique components tailored for specialized industrial needs."
+      }
+    ]
+  },
+  "organization": {
+    "title": "Organization",
+    "items": [
+      {
+        "title": "Procurement",
+        "description": "Our procurement team ensures timely sourcing of materials and efficient supplier coordination."
+      },
+      {
+        "title": "Domestic & International Sales",
+        "description": "Our sales departments handle both domestic and international markets, delivering responsive service to clients worldwide."
+      },
+      {
+        "title": "Logistics",
+        "description": "The logistics team ensures efficient and accurate delivery of products across the globe."
+      },
+      {
+        "title": "Quality Control & Assurance",
+        "description": "We implement rigorous quality control and assurance practices, including document verification, to maintain the highest standards."
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience List",
+    "bullets": [
+      "Carrying out piping material manufacturing and sourcing projects since 2020",
+      "Global supply record and provision of high-quality products",
+      "Compliance with standards for onshore/offshore/plant/construction projects",
+      "Commitment to customer satisfaction and continuous improvement"
+    ],
+    "table": {
+      "headers": [
+        "Year",
+        "Project Name",
+        "Purchaser",
+        "Location",
+        "Item",
+        "Material Reference"
+      ],
+      "rows": [
+        [
+          "2023",
+          "Piping Valve Modernization Revamping",
+          "Domestic EPC",
+          "Korea / Hyundai Heavy Industries, etc.",
+          "Fitting, Pipe",
+          "Carbon / Alloy / Stainless"
+        ],
+        [
+          "2022",
+          "Offshore Plant Spool",
+          "Middle East EPC",
+          "UAE / Dubai",
+          "Flange, Fitting, Pipe",
+          "CS / SS"
+        ],
+        [
+          "2021",
+          "TPA JOB",
+          "ZARAWA Company",
+          "Iraq",
+          "Flange, Fitting, Long Bend",
+          "CS / Hi-Tensile"
+        ],
+        [
+          "2020",
+          "TOC",
+          "Dubai Petroleum",
+          "Dubai",
+          "Flange, Fitting",
+          "Stainless / Carbon"
+        ]
+      ]
+    }
+  },
+  "service": {
+    "title": "After Sales Service",
+    "promises": [
+      "Quality assurance and documentation support (QA/QC, CoC, Mill Test Report)",
+      "Spare parts always in stock / Emergency response",
+      "On-site maintenance, rework, coating/machining support",
+      "Minimize reproduction lead time and offer alternatives"
+    ],
+    "tables": [
+      {
+        "title": "Staffs for After Sales",
+        "headers": [
+          "No.",
+          "Position"
+        ],
+        "rows": [
+          [
+            "1",
+            "Sales"
+          ],
+          [
+            "2",
+            "QA / QC Personnel"
+          ],
+          [
+            "3",
+            "Logistics"
+          ]
+        ]
+      },
+      {
+        "title": "After Sales Service Period",
+        "headers": [
+          "No.",
+          "Type of Treatment",
+          "Period"
+        ],
+        "rows": [
+          [
+            "1",
+            "Supply in Stock",
+            "Immediately"
+          ],
+          [
+            "2",
+            "Repair & Supply",
+            "1 week"
+          ],
+          [
+            "3",
+            "Re-production & Supply",
+            "4 weeks"
+          ]
+        ]
+      }
+    ],
+    "flowTitle": "Process Flow",
+    "steps": [
+      {
+        "title": "Product Info → Customer",
+        "description": "Provide product information before delivery"
+      },
+      {
+        "title": "Customer’s Approval",
+        "description": "Approval (Correction/Rework if not approved)"
+      },
+      {
+        "title": "Products Delivery",
+        "description": "Delivery and handover"
+      },
+      {
+        "title": "Customer’s Inspection",
+        "description": "Inspection / Claim submission in case of issues"
+      },
+      {
+        "title": "Assembling",
+        "description": "Installation/assembly support (upon request)"
+      }
+    ]
+  },
+  "suppliers": {
+    "title": "Our Suppliers",
+    "groups": [
+      {
+        "title": "Fittings",
+        "items": [
+          "TK Corporation (Korea)",
+          "SBC Bend (Korea)",
+          "Hwajin PF (Korea)",
+          "Daekyung Bend (Korea)",
+          "Jinil Bend (Korea)",
+          "Kyungnam Bend (Korea)",
+          "Pusan Fitting (Korea)",
+          "Samyoung Fitting (Korea)",
+          "HPCO (China)",
+          "FJGX (China)",
+          "Hong Cheung (China)",
+          "TIANLONG (China)",
+          "GUANGHAO (China)",
+          "C&N (China)",
+          "MTSCO (China)",
+          "Thai Benkan Co., Ltd / BKL (Thailand)",
+          "Tubacex (Spain)"
+        ]
+      },
+      {
+        "title": "Pipes",
+        "items": [
+          "Seah (Korea)",
+          "Hyundai RB (Korea)",
+          "DaiDuck (Korea)",
+          "Hyundai Steel (Korea)",
+          "TPCO (China)",
+          "Jiuli (China)",
+          "Walsin (China)",
+          "ChengDe (China)",
+          "Wujin (China)",
+          "BaoSteel (China)",
+          "FJGX (China)",
+          "Shandong Molong Petroleum (China)",
+          "JIANGSU XINCHANGJIANG (China)",
+          "Nippon Steel & Sumitomo Metal (Japan)",
+          "JFE Steel (Japan)",
+          "Kobelco (Japan)",
+          "V&M (France, Germany & Brazil)",
+          "Benteler (Germany)",
+          "US Steel (USA)",
+          "Tubacex (Spain)",
+          "Tubos Reunidos (Spain)",
+          "Inox Tech (Italy)",
+          "Productos (Spain)"
+        ]
+      },
+      {
+        "title": "Flanges",
+        "items": [
+          "SH Metal (Korea)",
+          "YCT / YCF CO., LTD (Korea)",
+          "Pillar Tech (Korea)",
+          "Hyundai Fitting (Korea)",
+          "Daehyeong (Korea)",
+          "Myungjin Metal (Korea)",
+          "Felix Tech (Korea)",
+          "Jinchuang (China)",
+          "C&N (China)",
+          "MTSCO (China)",
+          "HP CO (China)",
+          "ZOECA (China)",
+          "Ulma (Spain)",
+          "Galperti (Italy)"
+        ]
+      },
+      {
+        "title": "Valves & Others",
+        "items": [
+          "PK Valve (Korea)",
+          "DKC (Korea)",
+          "WILCO (Korea)",
+          "Woosung Valve (Korea)",
+          "SVT Corporation (Korea)",
+          "HKC Korea Precision (Korea)",
+          "HS Valve (Korea)",
+          "Kumsung Machinery (Korea)",
+          "KITT (Korea)",
+          "KJ ENG (Korea)",
+          "Jongang Bending (Korea)",
+          "Cheumwoo Industry (Korea)",
+          "Dongjin EF (Korea) – Expansion Joint, Rubber Joint, Silicone Joint"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "company": "SOON Corporation",
+    "address": "Address: Room 203-301, 12 Sicheong-ro, Yeonje-gu, Busan, Republic of Korea"
+  },
+  "business": "Business Registration No: 737-03-01553 | CEO: SY Kwon"
+}

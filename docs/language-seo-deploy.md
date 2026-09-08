@@ -58,8 +58,10 @@ Google의 재크롤링과 검색 순위 반영 시점은 보장할 수 없습니
 
 ## 배포 범위
 
-이 변경은 기존 React 사이트의 언어·검색 구조를 수정합니다.
-앞서 승인한 별도 디자인 샘플을 적용하는 변경은 포함하지 않습니다.
+승인한 디자인 샘플의 큰 대표 사진, 제품 이미지 카드, 여백, 파란 문의 영역을
+한국어·영어 사이트에 함께 적용했습니다. 두 언어는 `src/CompanyPage.tsx`의 같은
+화면 구조를 사용하며, 기존 본문은 `src/content/ko.json`, `en.json`에 보존합니다.
+제품 이미지는 AI 생성 예시임을 표시합니다. 지도는 연락처 아래의 지도 보기로 엽니다.
 
 참고: [Google 다국어 사이트 안내](https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites),
 [CloudFront Function 연결](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/functions-tutorial.html).
