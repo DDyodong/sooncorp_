@@ -77,6 +77,34 @@ jobs:
         with:
           name: website
           path: dist/
+      - name: Diagnose OIDC identity
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          try {
+            const url = new URL(process.env.ACTIONS_ID_TOKEN_REQUEST_URL);
+            url.searchParams.set('audience', 'sts.amazonaws.com');
+            const response = await fetch(url, {
+              headers: { Authorization: `Bearer ${process.env.ACTIONS_ID_TOKEN_REQUEST_TOKEN}` },
+              signal: AbortSignal.timeout(15000),
+            });
+            if (!response.ok) throw new Error('OIDC request failed');
+            const { value } = await response.json();
+            const claims = JSON.parse(Buffer.from(value.split('.')[1], 'base64url').toString());
+            // Log only identity fields, never the JWT or request credentials.
+            console.log(JSON.stringify({
+              role_arn: process.env.AWS_ROLE_ARN,
+              issuer: claims.iss,
+              audience: claims.aud,
+              subject: claims.sub,
+              repository: claims.repository,
+              ref: claims.ref,
+            }, null, 2));
+          } catch {
+            console.error('::error::Could not read OIDC identity. Check id-token permissions and retry.');
+            process.exitCode = 1;
+          }
+          NODE
       - uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: ${{ env.AWS_ROLE_ARN }}
