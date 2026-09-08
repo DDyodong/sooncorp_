@@ -1,4 +1,4 @@
-import React from 'react'
+import type { CSSProperties } from 'react'
 import { motion } from 'framer-motion'
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api'
 
@@ -21,7 +21,7 @@ function Contact() {
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY as string,
   })
 
-  const mapContainerStyle: React.CSSProperties = { width: '100%', height: '400px' }
+  const mapContainerStyle: CSSProperties = { width: '100%', height: '400px' }
 
   const center = { lat: 35.181108, lng: 129.07584 } // 부산
 

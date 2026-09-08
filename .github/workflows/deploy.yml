@@ -1,0 +1,97 @@
+name: Check and deploy website
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: website-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Check deployment map key
+        if: github.ref == 'refs/heads/main' && vars.AWS_DEPLOY_ENABLED == 'true'
+        env:
+          MAPS_KEY: ${{ secrets.VITE_GOOGLE_MAPS_API_KEY }}
+        run: |
+          if [ -z "$MAPS_KEY" ]; then
+            echo '::error::Set the VITE_GOOGLE_MAPS_API_KEY repository secret before deployment.'
+            exit 1
+          fi
+      - name: Typecheck, lint and build
+        run: npm run build
+        env:
+          VITE_GOOGLE_MAPS_API_KEY: ${{ secrets.VITE_GOOGLE_MAPS_API_KEY }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: website
+          path: dist/
+          if-no-files-found: error
+          retention-days: 7
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && vars.AWS_DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      AWS_REGION: ap-northeast-2
+      AWS_ROLE_ARN: ${{ vars.AWS_ROLE_ARN }}
+      S3_BUCKET: ${{ vars.S3_BUCKET }}
+      CLOUDFRONT_DISTRIBUTION_ID: ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}
+    steps:
+      - name: Check AWS settings
+        shell: bash
+        run: |
+          set -euo pipefail
+          for key in AWS_ROLE_ARN S3_BUCKET CLOUDFRONT_DISTRIBUTION_ID; do
+            if [ -z "${!key}" ]; then
+              echo "::error::Set repository variable $key before deployment."
+              exit 1
+            fi
+          done
+          [[ "$S3_BUCKET" =~ ^[a-z0-9][a-z0-9.-]{1,61}[a-z0-9]$ ]]
+          [[ "$CLOUDFRONT_DISTRIBUTION_ID" =~ ^E[A-Z0-9]+$ ]]
+      - uses: actions/download-artifact@v4
+        with:
+          name: website
+          path: dist/
+      - uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ env.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Upload assets, then HTML
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s dist/index.html
+          # Retain older assets so already-open pages can finish loading them.
+          aws s3 sync dist/ "s3://$S3_BUCKET/" --exclude '*.html' --cache-control 'public,max-age=300' --only-show-errors
+          aws s3 cp dist/ "s3://$S3_BUCKET/" --recursive --exclude '*' --include '*.html' --cache-control 'no-cache' --only-show-errors
+      - name: Refresh CloudFront cache
+        shell: bash
+        run: |
+          set -euo pipefail
+          invalidation_id=$(aws cloudfront create-invalidation --distribution-id "$CLOUDFRONT_DISTRIBUTION_ID" --paths '/*' --query 'Invalidation.Id' --output text)
+          aws cloudfront wait invalidation-completed --distribution-id "$CLOUDFRONT_DISTRIBUTION_ID" --id "$invalidation_id"

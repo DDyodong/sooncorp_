@@ -1,8 +1,6 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import App from './App'; // 영어 페이지
 import Kor from './Kr';  // 한국어 페이지
-import Header from './components/Header';
 
 export default function AppRouter() {
   const userLang = navigator.language || navigator.languages[0];

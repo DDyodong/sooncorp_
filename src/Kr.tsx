@@ -1,4 +1,3 @@
-import React from 'react'
 import Hero from './krcomponents/Hero'
 import AboutUs from './krcomponents/AboutUs'
 import Footer from './krcomponents/Footer'

@@ -1,4 +1,3 @@
-import React from 'react'
 import { motion } from 'framer-motion'
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api'
 
@@ -70,7 +69,7 @@ function Contact() {
               Email: ksy8634@naver.com
             </p>
             <p className='text-gray-600 mb-2'>
-              For Inquiries: soonslaes@sooncorp.kr
+              For Inquiries: soonsales@sooncorp.kr
             </p>
             
           </div>

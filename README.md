@@ -41,9 +41,11 @@ SPA 경로 처리가 필요합니다.
 `package.json`과 `package-lock.json`은 함께 관리합니다.
 Git 추적 제외만으로 기존 배포 사이트가 바뀌지는 않습니다.
 
-## 추후 AWS 자동 배포
+## AWS 자동 배포
 
-AWS 배포 서비스는 아직 연결하지 않았습니다. 연결할 때 사용할 기본 설정은 다음과 같습니다.
+`.github/workflows/deploy.yml`에 GitHub Actions 검사·배포 워크플로가 있습니다.
+AWS 연결값 등록과 IAM 역할 생성 절차는 [AWS 배포 가이드](docs/aws-deploy.md)를 참고하세요.
+`AWS_DEPLOY_ENABLED=true` 설정 전까지는 검사·빌드만 실행합니다.
 
 - 설치 명령: `npm ci` (빌드 도구가 필요하므로 개발 의존성도 설치)
 - 빌드 명령: `npm run build`
@@ -52,4 +54,4 @@ AWS 배포 서비스는 아직 연결하지 않았습니다. 연결할 때 사�
 - 빌드 실패 시 배포 중단
 - SPA 경로를 `index.html`로 연결
 
-실제 AWS 서비스와 배포 대상이 정해지면 업로드, 캐시 갱신, 자동 실행 조건을 추가합니다.
+연결이 완료되면 main push 시 빌드 → S3 업로드 → CloudFront 캐시 갱신을 실행합니다.
