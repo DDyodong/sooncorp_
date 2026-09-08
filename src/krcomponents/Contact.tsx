@@ -30,7 +30,7 @@ function Contact() {
       id="contact"
       className="py-16"
       variants={containerVariants}
-      initial="hidden"
+      initial={false}
       animate="visible"
     >
       <div className="container mx-auto px-6">
@@ -43,7 +43,7 @@ function Contact() {
 
         <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8" variants={itemVariants}>
           <div>
-            <h3 className="text-xl font-semibold text-gray-700 mb-4">순코프레이션</h3>
+            <h3 className="text-xl font-semibold text-gray-700 mb-4">순코퍼레이션</h3>
             <p className="text-gray-600 mb-2">
               주소: 부산광역시 연제구 시청로 12, 203-301호 (대한민국)
             </p>

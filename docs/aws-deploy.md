@@ -12,10 +12,10 @@ PR은 검사·빌드만 수행합니다. main 배포는 아래 설정을 끝낸 
   `*.cloudfront.net`은 접속 주소이므로 ID 대신 입력하지 않습니다.
 - 비공개 S3 일반 버킷 원본에 OAC와 버킷 정책을 연결합니다.
 - CloudFront 기본 루트 객체: `index.html`.
-- 현재 코드의 `/kr`, `/App` 직접 접속을 위해 CloudFront Function에서
-  해당 경로만 `/index.html`로 내부 재작성하도록 설정해야 합니다.
+- 언어별 경로는 [한국어·영어 배포 가이드](language-seo-deploy.md)에 따라
+  `infra/cloudfront-language-routing.js`를 뷰어 요청 함수로 연결합니다.
+  `/`는 한국어, `/en/`은 영어 HTML을 반환하고 `/kr`, `/App`은 새 주소로 301 이동합니다.
   모든 403/404를 HTML 성공 응답으로 바꾸지 마세요.
-  향후 `/`, `/en/` 언어별 HTML 빌드를 도입하면 이 규칙도 함께 변경합니다.
 
 ## 2. IAM OIDC 역할 만들기
 
@@ -29,6 +29,11 @@ IAM 역할을 만들고 다음 신뢰 정책을 사용합니다.
 `ACCOUNT_ID`는 자신의 AWS 계정 ID로 바꿉니다.
 동일한 공급자가 이미 있다면 다시 만들지 않습니다.
 
+이 저장소는 2026-09-08에 생성됐으므로 GitHub의 ID 포함 OIDC subject 형식을 사용합니다.
+아래 조건은 공개 API에서 확인한 owner ID `171115953`, repository ID `1360921301`을 포함합니다.
+`sts:AssumeRoleWithWebIdentity` 거절 시 GitHub의 `AWS_ROLE_ARN`이 가리키는 역할의
+신뢰 관계에 이 정책이 적용됐는지 확인하세요. 로컬 파일 수정만으로 AWS 정책은 바뀌지 않습니다.
+
 ```json
 {
   "Version": "2012-10-17",
@@ -38,7 +43,7 @@ IAM 역할을 만들고 다음 신뢰 정책을 사용합니다.
     "Action": "sts:AssumeRoleWithWebIdentity",
     "Condition": {"StringEquals": {
       "token.actions.githubusercontent.com:aud": "sts.amazonaws.com",
-      "token.actions.githubusercontent.com:sub": "repo:DDyodong/sooncorp_:ref:refs/heads/main"
+      "token.actions.githubusercontent.com:sub": "repo:DDyodong@171115953/sooncorp_@1360921301:ref:refs/heads/main"
     }}
   }]
 }
@@ -101,9 +106,10 @@ Run workflow에서 main을 선택하거나 새 커밋을 push합니다.
 이전 파일은 자동 삭제하지 않으므로 배포 중 기존 페이지가 참조하는 파일이 사라지지 않습니다.
 오래된 파일은 보관 정책을 정해 별도로 정리합니다. 여러 파일 업로드는 원자적 배포가 아닙니다.
 
-Actions 성공 뒤 `/`, `/kr`, `/App`의 직접 접속·새로고침, 언어 전환, 지도를 확인합니다.
+Actions 성공 뒤 `/`, `/en/`의 직접 접속·새로고침, 언어 전환, 지도를 확인합니다.
+`/kr`, `/App`은 새 주소로 301 이동하는지 확인합니다.
 실제 CloudFront/S3/OIDC 연결 검증은 첫 배포에서 수행해야 합니다.
-이 자동화 자체는 디자인이나 검색엔진용 언어별 HTML 구조를 변경하지 않습니다.
+빌드가 언어별 HTML을 미리 생성합니다. CloudFront 함수 연결은 별도 AWS 설정입니다.
 
 공식 문서:
 - [GitHub의 AWS OIDC 설정](https://docs.github.com/en/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-aws)

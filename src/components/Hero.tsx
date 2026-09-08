@@ -25,7 +25,7 @@ function Hero() {
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed', // Parallax 느낌
       }}
-      initial={{ opacity: 0 }}
+      initial={false}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >

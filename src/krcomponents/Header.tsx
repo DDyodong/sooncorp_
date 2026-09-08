@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 function Header() {
   return (
     <header className="bg-white py-4 shadow-md">
@@ -9,14 +7,14 @@ function Header() {
           src='/img/sooncorplogo.png'
           alt= 'logo'
           className='h-8 w-auto mr-2'></img>
-          SOONCORPORATION
+          순코퍼레이션
         </a>
         <nav>
           <ul className="flex space-x-6">
             <li>
-              <Link to="/App"  className="text-gray-600 hover:text-blue-500">
-                En
-              </Link>
+              <a href="/en/" hrefLang="en" lang="en" className="text-gray-600 hover:text-blue-500">
+                English
+              </a>
             </li>
           </ul>
         </nav>

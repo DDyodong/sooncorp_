@@ -1,21 +1,14 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import App from './App'; // 영어 페이지
-import Kor from './Kr';  // 한국어 페이지
+import App from './App'
+import Kor from './Kr'
+import type { Locale } from './site'
 
-export default function AppRouter() {
-  const userLang = navigator.language || navigator.languages[0];
-  const isKor = userLang.startsWith('ko');
-
-  document.title = isKor ? '순코퍼레이션' : 'SOONCORPORATION';
-
+export default function AppRouter({ locale }: { locale: Locale | null }) {
+  if (locale === 'ko') return <Kor />
+  if (locale === 'en') return <App />
   return (
-    <Router>
-      <Routes>
-        <Route path="/App" element={<App />} />
-        <Route path="/kr" element={<Kor />} />
-        {/* 초기 진입 시 언어에 맞춰서 자동 리다이렉트 */}
-        <Route path="*" element={<Navigate to={isKor ? "/kr" : "/App"} />} />
-      </Routes>
-    </Router>
-  );
+    <main className="mx-auto max-w-3xl px-6 py-24">
+      <h1 className="text-3xl font-bold">페이지를 찾을 수 없습니다 · Page not found</h1>
+      <p className="mt-6"><a href="/">한국어 홈</a> · <a href="/en/">English home</a></p>
+    </main>
+  )
 }

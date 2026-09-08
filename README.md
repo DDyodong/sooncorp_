@@ -30,12 +30,15 @@ npm run preview
 ```
 
 `build`는 타입 검사와 린트가 모두 통과한 뒤 Vite로 `dist/`를 새로 생성합니다.
+한국어 `dist/index.html`과 영어 `dist/en/index.html`에 본문·검색 정보를 미리 넣고,
+사이트맵·robots.txt 생성과 SEO·CloudFront 경로 테스트까지 실행합니다.
 실패하면 업로드하지 마세요. 검사 단계에서 실패한 경우 이전 `dist/`가 남아 있을 수 있습니다.
 
 미리보기에서 한국어·영어 페이지, 언어 전환, 지도, 공급사 아코디언을 확인한 뒤
 새 `dist/`의 내용물을 현재 정적 호스팅 위치에 업로드합니다.
-호스팅 서버는 `/kr` 및 `/App` 직접 접속 시에도 `index.html`을 제공하도록
-SPA 경로 처리가 필요합니다.
+공개 주소는 `/`(한국어), `/en/`(영어)입니다. 브라우저 언어에 따른 자동 이동은 없습니다.
+기존 `/kr`, `/App`의 301 이동과 언어별 파일 연결은
+[한국어·영어 배포 가이드](docs/language-seo-deploy.md)에 따라 CloudFront Function으로 처리합니다.
 
 `node_modules/`와 `dist/`는 Git에 저장하지 않습니다.
 `package.json`과 `package-lock.json`은 함께 관리합니다.
@@ -52,6 +55,6 @@ AWS 연결값 등록과 IAM 역할 생성 절차는 [AWS 배포 가이드](docs/
 - 배포할 산출물: `dist/`
 - 빌드 환경 변수: `VITE_GOOGLE_MAPS_API_KEY`
 - 빌드 실패 시 배포 중단
-- SPA 경로를 `index.html`로 연결
+- 언어별 HTML 연결과 기존 주소 301 이동을 CloudFront Function으로 처리
 
 연결이 완료되면 main push 시 빌드 → S3 업로드 → CloudFront 캐시 갱신을 실행합니다.

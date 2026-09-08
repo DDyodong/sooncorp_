@@ -22,7 +22,7 @@ function Organization() {
     <motion.section
       className="py-16"
       variants={containerVariants}
-      initial="hidden"
+      initial={false}
       animate="visible"
     >
       <div className="container mx-auto px-6">

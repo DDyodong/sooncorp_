@@ -22,7 +22,7 @@ function Footer() {
     <motion.footer
       className="bg-gray-800 py-8 text-white"
       variants={containerVariants}
-      initial="hidden"
+      initial={false}
       animate="visible"
     >
       <div className="container mx-auto px-6 text-center">

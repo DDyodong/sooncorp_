@@ -24,7 +24,7 @@ function AboutUs() {
       id="about"
       className="py-20"
       variants={containerVariants}
-      initial="hidden"
+      initial={false}
       animate="visible"
       exit="exit"
     >

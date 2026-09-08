@@ -22,7 +22,7 @@ function StockProgram() {
     <motion.section
       className="py-16 bg-gray-50"
       variants={containerVariants}
-      initial="hidden"
+      initial={false}
       animate="visible"
     >
       <div className="container mx-auto px-6">
