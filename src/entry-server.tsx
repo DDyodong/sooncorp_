@@ -1,6 +1,7 @@
 import { renderToStaticMarkup, renderToString } from 'react-dom/server'
 import AppRouter from './router'
 import { pages, siteUrl, type Locale } from './site'
+import { officePostalAddress } from './office'
 
 export function renderPage(locale: Locale) {
   const page = pages[locale]
@@ -11,6 +12,7 @@ export function renderPage(locale: Locale) {
     name: '순코퍼레이션', alternateName: 'SOON Corporation',
     url: siteUrl + '/', logo: siteUrl + '/img/sooncorplogo.png',
     email: 'soonsales@sooncorp.kr',
+    address: officePostalAddress,
   }
   const head = renderToStaticMarkup(
     <>

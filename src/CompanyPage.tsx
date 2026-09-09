@@ -3,12 +3,11 @@ import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api'
 import ko from './content/ko.json'
 import en from './content/en.json'
 import type { Locale } from './site'
+import { officeCenter as center, officeMapLink as mapLink } from './office'
 import './company-page.css'
 
 const productLabels = ['FITTINGS', 'FLANGES', 'VALVES', 'FORGINGS', 'PIPES', 'SPECIALTY ITEMS']
 const teamLabels = ['PURCHASING', 'SALES', 'LOGISTICS', 'QA & QC']
-const center = { lat: 35.181108, lng: 129.075840 }
-const mapLink = 'https://www.google.com/maps/search/?api=1&query=35.181108,129.075840'
 const number = (index: number) => String(index + 1).padStart(2, '0')
 
 function DataTable({ data }: { data: { headers: string[]; rows: string[][] } }) {

@@ -1,6 +1,8 @@
 import type { CSSProperties } from 'react'
 import { motion } from 'framer-motion'
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api'
+import { officeCenter as center } from '../office'
+import ko from '../content/ko.json'
 
 function Contact() {
   const containerVariants = {
@@ -23,8 +25,6 @@ function Contact() {
 
   const mapContainerStyle: CSSProperties = { width: '100%', height: '400px' }
 
-  const center = { lat: 35.181108, lng: 129.07584 } // 부산
-
   return (
     <motion.section
       id="contact"
@@ -45,7 +45,7 @@ function Contact() {
           <div>
             <h3 className="text-xl font-semibold text-gray-700 mb-4">순코퍼레이션</h3>
             <p className="text-gray-600 mb-2">
-              주소: 부산광역시 연제구 시청로 12, 203-301호 (대한민국)
+              {ko.contact.address}
             </p>
             <p className="text-gray-600 mb-2">전화: +82-10-8770-6145</p>
             <p className="text-gray-600 mb-2">팩스: +82-51-868-7280</p>

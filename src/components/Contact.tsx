@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api'
+import { officeCenter as center } from '../office'
+import en from '../content/en.json'
 
 function Contact() {
   const containerVariants = {
@@ -28,11 +30,6 @@ function Contact() {
     height: '400px',
   }
 
-  const center = {
-    lat: 35.181108, // Latitude for Busan
-    lng: 129.075840, // Longitude for Busan
-  }
-
   return (
     <motion.section
       id="contact"
@@ -57,7 +54,7 @@ function Contact() {
               SOON Corporation
             </h3>
             <p className="text-gray-600 mb-2">
-              Address: Room 203-301, 12 Sicheong-ro, Yeonje-gu, Busan, Republic of Korea
+              {en.contact.address}
             </p>
             <p className="text-gray-600 mb-2">
               Phone: +82-10-8770-6145
